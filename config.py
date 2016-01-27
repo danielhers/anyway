@@ -10,9 +10,9 @@ import os
 
 
 SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
+SQLALCHEMY_POOL_RECYCLE = 60
 SENDGRID_USERNAME = os.environ.get('SENDGRID_USERNAME')
 SENDGRID_PASSWORD = os.environ.get('SENDGRID_PASSWORD')
-SQLALCHEMY_POOL_RECYCLE = 60
 
 
 SECRET_KEY = 'aiosdjsaodjoidjioewnioewfnoeijfoisdjf'

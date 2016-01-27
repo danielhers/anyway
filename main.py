@@ -42,6 +42,7 @@ app.config.from_object(__name__)
 app.config['SECURITY_REGISTERABLE'] = False
 app.config['SECURITY_USER_IDENTITY_ATTRIBUTES'] = 'username'
 app.config['BABEL_DEFAULT_LOCALE'] = 'he'
+# app.config['UGLIFYJS_EXTRA_ARGS'] = ['--source-map', 'app.js.map', '-c', '-m', '--lint']
 
 assets = flask.ext.assets.Environment()
 assets.init_app(app)
