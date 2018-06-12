@@ -2,6 +2,9 @@
 # -*- coding: utf-8 -*-
 import json
 import logging
+
+from geoalchemy2 import Geometry
+
 from .constants import CONST
 from collections import namedtuple
 from sqlalchemy import Column, Integer, String, Boolean, Float, ForeignKey, DateTime, Text, Index, desc, sql, Table, \
@@ -91,6 +94,7 @@ class Point(object):
     id = Column(Integer, primary_key=True)
     latitude = Column(Float())
     longitude = Column(Float())
+    geo = Column(Geometry(geometry_type='POINT', srid=4326))
 
 class MarkerMixin(Point):
     type = Column(Integer)
